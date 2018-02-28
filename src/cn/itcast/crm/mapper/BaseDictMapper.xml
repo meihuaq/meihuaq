@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itcast.crm.mapper.BaseDictMapper">
+
+
+<!-- 	// 客户来源 002 -->
+<!-- 	// 所属行业 001 -->
+<!-- 	// 客户级别 006 -->
+<!-- 	public List<BaseDict> findBaseDictListByTypeCode(String typeCode); -->
+	<select id="findBaseDictListByTypeCode" parameterType="String" resultType="BaseDict">
+		select * from base_dict where dict_type_code = #{typeCode}
+	</select>
+
+</mapper>
